@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.SeekBar
 import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         actionBar!!.title = "Password generator";
         supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#2E84BC")));
 
-        val passwordSlider = findViewById<com.google.android.material.slider.Slider>(R.id.passwordLength);
+        val passwordSlider = findViewById<SeekBar>(R.id.passwordLength);
 
     }
 }
