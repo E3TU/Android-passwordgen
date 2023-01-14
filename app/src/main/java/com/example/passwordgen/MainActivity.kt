@@ -10,8 +10,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //Changing actionbar title and color
         val actionBar = supportActionBar;
         actionBar!!.title = "Password generator";
         supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#2E84BC")));
+
+        val passwordSlider = findViewById<com.google.android.material.slider.Slider>(R.id.passwordLength);
+
     }
 }
