@@ -12,16 +12,21 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:layout_marginTop="300dp">
+        android:layout_marginTop="250dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password length">
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="Password length: ">
         </TextView>
         <SeekBar
             android:id="@+id/passwordLength"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content">
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:min="5"
+            android:max="50">
         </SeekBar>
         <Button
             android:id="@+id/generatePword"
@@ -30,7 +35,7 @@
             android:backgroundTint="@color/light_blue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             tools:ignore="MissingConstraints">
         </Button>
     </LinearLayout>
