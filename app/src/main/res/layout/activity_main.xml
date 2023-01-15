@@ -12,8 +12,25 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:layout_marginTop="250dp">
+        android:layout_marginTop="150dp">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Click generate"
+            android:textSize="20dp">
+        </TextView>
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/copyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copy"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/light_blue">
+        </Button>
+        <TextView
+            android:layout_marginTop="60dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
