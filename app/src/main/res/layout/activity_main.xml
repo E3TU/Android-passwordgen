@@ -14,6 +14,7 @@
         android:orientation="vertical"
         android:layout_marginTop="150dp">
         <TextView
+            android:id="@+id/passwordTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -29,23 +30,22 @@
             android:textColor="@color/white"
             android:backgroundTint="@color/light_blue">
         </Button>
-        <!--<TextView
+        <TextView
             android:layout_marginTop="60dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:text="Password length: ">
-        </TextView>-->
-        <EditText
+        </TextView>
+        <SeekBar
             android:id="@+id/passwordLength"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:hint="Enter password length"
-            android:textColorHint="@color/white"
             android:layout_marginTop="40dp"
-            android:inputType="number">
-        </EditText>
+            android:min="5"
+            android:max="50">
+        </SeekBar>
         <Button
             android:id="@+id/generateBtn"
             android:textColor="@color/white"
@@ -53,7 +53,7 @@
             android:backgroundTint="@color/light_blue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="40dp"
             tools:ignore="MissingConstraints">
         </Button>
     </LinearLayout>
