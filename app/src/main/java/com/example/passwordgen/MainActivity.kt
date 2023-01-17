@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val generateButton = findViewById<Button>(R.id.generateBtn);
         val passwordOutput = findViewById<TextView>(R.id.passwordTxt);
         val copyButton = findViewById<Button>(R.id.copyBtn);
+        val lengthTw = findViewById<TextView>(R.id.lengthTw);
 
         fun generatepassWord(n: Int): String {
             val chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%&/()=?+-_.,*";
@@ -58,5 +59,24 @@ class MainActivity : AppCompatActivity() {
             printPassword();
             passwordLength.clearFocus();
         }
+
+        passwordLength?.setOnSeekBarChangeListener(object :
+        SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(
+                seek: SeekBar,
+                progress: Int, fromUser: Boolean
+            ) {
+                // write custom code for progress is changed
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar) {
+                // write custom code for progress is started
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar) {
+                // write custom code for progress is stopped
+                lengthTw.text = "Password length: " + seekBar.progress;
+            }
+        })
     }
 }
