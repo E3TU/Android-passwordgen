@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
@@ -41,13 +42,14 @@ class MainActivity : AppCompatActivity() {
             return password.toString();
         }
         fun printPassword() {
-            val n = 20;
+            val n = passwordLength.progress;
             //println(generatepassWord(n));
             passwordOutput.text = generatepassWord(n);
         }
 
         copyButton.setOnClickListener() {
             val copyPassword = passwordOutput.text;
+
             val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager;
             val clipData = ClipData.newPlainText("text", copyPassword);
             clipboardManager.setPrimaryClip(clipData);
@@ -67,6 +69,7 @@ class MainActivity : AppCompatActivity() {
                 progress: Int, fromUser: Boolean
             ) {
                 // write custom code for progress is changed
+                lengthTw.text = "Password length: " + progress;
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar) {
@@ -75,7 +78,6 @@ class MainActivity : AppCompatActivity() {
 
             override fun onStopTrackingTouch(seekBar: SeekBar) {
                 // write custom code for progress is stopped
-                lengthTw.text = "Password length: " + seekBar.progress;
             }
         })
     }
