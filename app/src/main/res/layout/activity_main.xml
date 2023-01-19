@@ -15,12 +15,14 @@
         android:layout_marginTop="150dp">
         <TextView
             android:id="@+id/passwordTxt"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:text="Click generate"
             android:textSize="20dp"
-            android:lineBreakWordStyle="phrase">
+            android:lineBreakWordStyle="phrase"
+            >
         </TextView>
         <Button
             android:layout_marginTop="20dp"
