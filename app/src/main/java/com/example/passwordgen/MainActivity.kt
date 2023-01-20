@@ -49,12 +49,18 @@ class MainActivity : AppCompatActivity() {
 
         copyButton.setOnClickListener() {
             val copyPassword = passwordOutput.text;
+            if (passwordOutput.text == "Click generate") {
+                Toast.makeText(this, "Generate password first", Toast.LENGTH_LONG).show()
+            }
+            else {
+                val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager;
+                val clipData = ClipData.newPlainText("text", copyPassword);
 
-            val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager;
-            val clipData = ClipData.newPlainText("text", copyPassword);
-            clipboardManager.setPrimaryClip(clipData);
+                clipboardManager.setPrimaryClip(clipData);
 
-            Toast.makeText(this, "Password copied", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Password copied", Toast.LENGTH_LONG).show()
+            }
+
         }
 
         generateButton.setOnClickListener() {
