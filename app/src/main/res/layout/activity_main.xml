@@ -14,33 +14,36 @@
         android:orientation="vertical"
         android:layout_marginTop="150dp">
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
-
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/passwordTxt"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="50dp"
+                android:textColor="@color/white"
+                android:text="Click generate"
+                android:textSize="20dp"
+                android:lineBreakWordStyle="phrase"
+                android:lineBreakStyle="strict"
+                >
+            </TextView>
+            <Button
+                android:layout_marginTop="20dp"
+                android:id="@+id/copyBtn"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Copy"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/light_blue">
+            </Button>
         </LinearLayout>
         <TextView
-            android:id="@+id/passwordTxt"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="Click generate"
-            android:textSize="20dp"
-            android:lineBreakWordStyle="phrase"
-            >
-        </TextView>
-        <Button
-            android:layout_marginTop="20dp"
-            android:id="@+id/copyBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Copy"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/light_blue">
-        </Button>
-        <TextView
             android:id="@+id/lengthTw"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -53,7 +56,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:min="5"
-            android:max="50">
+            android:max="50"
+            android:thumbTint="@color/white"
+            android:progressBackgroundTint="@color/light_blue"
+            android:progressTint="@color/light_blue">
         </SeekBar>
         <Button
             android:id="@+id/generateBtn"
