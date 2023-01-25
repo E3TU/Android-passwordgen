@@ -4,6 +4,7 @@ import android.content.ClipData
 import android.content.ClipData.Item
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.view.Menu
 import android.view.MenuItem
@@ -100,8 +101,10 @@ class MainActivity : AppCompatActivity() {
         val id = item.getItemId();
         val settings = R.id.setting_action;
 
-        if (id == R.id.setting_action) {
-            Toast.makeText(this, "Item One Clicked", Toast.LENGTH_LONG).show();
+        if (id == settings) {
+//            Toast.makeText(this, "Item One Clicked", Toast.LENGTH_LONG).show();
+            val settingsMenu = Intent(this, settingstest::class.java);
+            startActivity(settingsMenu);
             return true;
         }
 
