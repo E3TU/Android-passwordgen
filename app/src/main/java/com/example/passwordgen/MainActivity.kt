@@ -1,9 +1,12 @@
 package com.example.passwordgen
 
 import android.content.ClipData
+import android.content.ClipData.Item
 import android.content.ClipboardManager
 import android.content.Context
 import android.graphics.Color
+import android.view.Menu
+import android.view.MenuItem
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -50,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         copyButton.setOnClickListener() {
             val copyPassword = passwordOutput.text;
             if (passwordOutput.text == "Click generate") {
-                Toast.makeText(this, "Generate password first", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Generate password first", Toast.LENGTH_LONG).show();
             }
             else {
                 val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager;
@@ -58,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
                 clipboardManager.setPrimaryClip(clipData);
 
-                Toast.makeText(this, "Password copied", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Password copied", Toast.LENGTH_LONG).show();
             }
 
         }
@@ -86,5 +89,23 @@ class MainActivity : AppCompatActivity() {
                 // write custom code for progress is stopped
             }
         })
+    }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle action bar item clicks here.
+        val id = item.getItemId();
+        val settings = R.id.setting_action;
+
+        if (id == R.id.setting_action) {
+            Toast.makeText(this, "Item One Clicked", Toast.LENGTH_LONG).show();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+
     }
 }
