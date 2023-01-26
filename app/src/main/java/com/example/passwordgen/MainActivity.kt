@@ -15,6 +15,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.random.Random
+const val actionbarTitle = "Password generator"
+const val actionbarColor = "#2E84BC"
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +25,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //Changing actionbar title and color
         val actionBar = supportActionBar
-        actionBar!!.title = "Password generator"
-        supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#2E84BC")))
+        actionBar!!.title = actionbarTitle
+        actionBar.setBackgroundDrawable(ColorDrawable(Color.parseColor(actionbarColor)))
 
         val passwordLength = findViewById<SeekBar>(R.id.passwordLength)
         val generateButton = findViewById<Button>(R.id.generateBtn)
@@ -95,12 +98,12 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here.
-        val id = item.getItemId()
-        val settings = R.id.setting_action
+        val id = item.itemId
+        val settings = R.id.settings_action;
 
         if (id == settings) {
 //            Toast.makeText(this, "Item One Clicked", Toast.LENGTH_LONG).show();
-            val settingsMenu = Intent(this, settingstest::class.java)
+            val settingsMenu = Intent(this, Settings::class.java)
             startActivity(settingsMenu)
             return true
         }
