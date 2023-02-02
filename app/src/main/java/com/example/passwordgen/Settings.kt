@@ -12,7 +12,7 @@ class Settings : AppCompatActivity() {
 
         val actionBar = supportActionBar
 
-        actionBar!!.title = actionbarTitle
+        actionBar!!.title = "Theme";
         actionBar.setBackgroundDrawable(ColorDrawable(Color.parseColor(actionbarColor)))
 
 
