@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layoutDirection="rtl"
             android:layout_margin="10dp"
+            android:checked="true"
             android:text="Dark"
             android:textSize="15dp">
         </RadioButton>
