@@ -14,6 +14,7 @@ import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import kotlin.random.Random
 const val actionbarTitle = "Password generator"
 const val actionbarColor = "#2E84BC"
@@ -90,25 +91,5 @@ class MainActivity : AppCompatActivity() {
                 // write custom code for progress is stopped
             }
         })
-    }
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu, menu)
-        return true
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here.
-        val id = item.itemId
-        val settings = R.id.settings_action;
-
-        if (id == settings) {
-//            Toast.makeText(this, "Item One Clicked", Toast.LENGTH_LONG).show();
-            val settingsMenu = Intent(this, Settings::class.java)
-            startActivity(settingsMenu)
-            return true
-        }
-
-        return super.onOptionsItemSelected(item)
-
     }
 }
